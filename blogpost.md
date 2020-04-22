@@ -143,7 +143,7 @@ async def process(
 ):
 ```
 
-Our endpoint has to accept [form data](https://fastapi.tiangolo.com/tutorial/request-forms/). Do you remember the tag attributes `name` in each input of our html? Here our parameters must have the same name. That's how the main app will send them.
+Our endpoint has to accept [form data](https://fastapi.tiangolo.com/tutorial/request-forms/). Do you remember the tag attributes `name` in each input of our html? Here our parameters must have the same name. That's how the website will send them.
 
 ```python
 image_contents = await image_uploads.read()
@@ -163,7 +163,7 @@ response = requests.post(
 
 In the line `os.getenv("API_URL", "https://autoderm-api.firstderm.com/Query")` we are doing the same as we did with our API key. But now we are setting a default value (the current API url). If there is no `API_URL` variable set up, it will fallback to the default (https://autoderm-api.firstderm.com/Query).
 
-To finish with our backend, we make a request to our API and gather the results.
+To finish with our backend, we make a request to our API, get the results and render them.
 
 ```python
 data = response.json()
@@ -189,7 +189,7 @@ Our API returns an array of the top results. Each element of that array looks li
 
 ## Frontend (part 2)
 
-We have received our results from the API. We can now create a different template to render the results. Remember we are using Jinja2, that's why there are some expressions with `{}`. But you can do the same in any JavaScript framework by doing `predictions.map(pred => ...)`.
+We have received our results from the API. We can now create a different template to render the results. Remember we are using Jinja2, that's why there are some expressions with `{}`. You can do the same in JavaScript by doing `predictions.map(pred => ...)`. Something equivalent can be done in any framework you use to develop your app.
 
 To render the results as a table:
 
