@@ -3,62 +3,40 @@
 
 ![](https://www.firstderm.com/wp-content/uploads/2017/01/firstderm_tm.png)
 
-One to two paragraph statement about your product and what it does.
-
 ## Installation
 
-OS X & Linux:
-
-Clone the repository and run:
+Clone the repository:
 
 ```sh
-git clone https://github.com/polyrand/setDNS.git
-chmod +x setdns.py
-./setdns.py
+git clone https://github.com/polyrand/firstderm_demo.git
 ```
 
+Install the requirements in your virtual environment:
 
-Windows:
-
-```sh
-edit autoexec.bat
+```bash
+pip install fastapi
+pip install python-multipart
+pip install uvicorn
+pip install Jinja2
 ```
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+You can run the app using [uvicorn](https://github.com/encode/uvicorn):
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
+```python
+uvicorn app:app --reload
 ```
 
 ## Release History
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
 * 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
+    * Initial release
+
 
 ## Meta
 
 Ricardo Ander-Egg Aguilar – [@ricardoanderegg](https://twitter.com/ricardoanderegg) –
-
-Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 [https://github.com/polyrand/](https://github.com/polyrand/)
 
