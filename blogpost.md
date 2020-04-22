@@ -223,11 +223,19 @@ To render the results as a table:
 </table>
 ```
 
-By indexing on `prediction`, when we do `prediction["name"]`. We are getting that value from the dictionary we saw before.
+In the code above we are looping over the predictions list/array.
+By indexing on `prediction` when we do `prediction["name"]`, we are getting that value from the dictionary we saw before.
+
+## Important things to have in mind.
+
+* The data has to be sent as form data to our API. Here it was done with Python but it can be done in any language or framework you use.
+* Keep the API key safe.
+* You can process or get the image however you want. Here we were also getting the image from an html form, but you could be getting it from a JSON API, just remember to send it to us as form data afterwards.
+* Set the API key in your request headers with the name "Api-Key": <your_key>
 
 ## Conclusion
 
-After remove blank lines. Both html files and the python app together add up to 98 lines of code. Of course, we have ignored a bit of boilerplate code, and we have not added any styles to our app. You can see the complete app, with all the code and some CSS styles on [GitHub](https://github.com/polyrand/firstderm_demo). This is how it looks:
+After removing blank lines. Both html files and the python app together add up to 98 lines of code. Of course, we have ignored a bit of boilerplate code, and we have not added any styles to our app. You can see the complete app, with all the code and some CSS styles on [GitHub](https://github.com/polyrand/firstderm_demo). This is how it looks:
 
 * Input form
 
@@ -237,4 +245,4 @@ After remove blank lines. Both html files and the python app together add up to 
 
 ![](res.png)
 
-In times of CoV-19, telemedicine is becoming a must. Check [our API]( https://www.firstderm.com/autoderm-dermatology-artificial-intelligence-ai-api/) to include it in any app you build.
+In times of CoV-19, telemedicine is becoming a must. Check [our API](https://www.firstderm.com/autoderm-dermatology-artificial-intelligence-ai-api/) to include it in any app you build.
