@@ -201,6 +201,6 @@ After removing blank lines. Both html files and the python app together add up t
 
 * Results
 
-![](res.png)
+![](results.png)
 
 In times of CoV-19, telemedicine is becoming a must. Check [our API](https://www.firstderm.com/autoderm-dermatology-artificial-intelligence-ai-api/) to include it in any app you build.
