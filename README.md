@@ -25,13 +25,17 @@ pip install Jinja2
 You can run the app using [uvicorn](https://github.com/encode/uvicorn):
 
 ```python
-uvicorn app:app --reload
+uvicorn main:app --host 0.0.0.0 --port 8000
+# or...
+python3 main.py
 ```
 
 ## Release History
 
-* 0.1.0
-    * Initial release
+* 2.0
+    * Update to the new API
+* 1.0
+    * Initial post
 
 
 ## Meta
