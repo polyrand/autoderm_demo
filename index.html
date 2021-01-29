@@ -1,80 +1,27 @@
-{% extends "base.html" %} {% block title %}Index{% endblock %} {% block
-content%}
-<div class="mt-10">
-  <form
-    class="w-full max-w-lg"
-    method="post"
-    enctype="multipart/form-data"
-    action="/img"
-  >
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-first-name"
-        >
-          Age
-        </label>
-        <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          id="age"
-          name="age"
-          type="number"
-          placeholder="How old are you?"
-          required
-        />
-      </div>
-      <div class="w-full md:w-1/2 px-3">
-        <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-last-name"
-        >
-          Sex
-        </label>
-        <select
-          id="sex"
-          name="sex"
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          required
-        >
-          <option value="female">Male</option>
-          <option value="male" selected>Female</option>
-        </select>
-      </div>
-    </div>
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full px-3">
-        <label
-          for="image_uploads"
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-        >
-          Choose images to upload
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block content%}
+<div class="mt-2 mx-4">
+    <h1 class="font-bold mb-10 text-center">Autoderm AI<h1>
+	<form class="w-full max-w-lg" method="post" enctype="multipart/form-data" action="/image">
+		<div class="flex flex-wrap -mx-3 mb-6">
+			<div class="w-full px-3">
+				<label
+                for="image"
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+          Choose image to upload
         </label>
         <input
           class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           type="file"
-          id="image_uploads"
-          name="image_uploads"
+          id="image"
+          name="image"
           accept="image/*"
           required
         />
         <p class="text-gray-600 text-xs italic">
           Choose 1 image to upload
         </p>
-      </div>
-    </div>
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full px-3">
-        <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="message"
-        >
-          Message
-        </label>
-        <textarea
-          class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
-          id="message"
-        ></textarea>
       </div>
     </div>
     <div class="md:flex md:items-center">
@@ -91,4 +38,4 @@ content%}
     </div>
   </form>
 </div>
-{% endblock %}
+{% endblock content %}

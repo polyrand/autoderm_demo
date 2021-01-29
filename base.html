@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% block head %}
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <title>{% block title %}{% endblock %} - FirstDerm</title>
-    <meta name="description" content="Dermatology AI made easy" />
-    <meta name="author" content="Ricardo Ander-Egg" />
-    {% endblock %}
-  </head>
-  <body>
-    <div id="content" class="flex justify-center items-center">
-      {% block content %}{% endblock %}
-    </div>
-    <div id="footer">
-      {% block footer %} &copy;
-      <a href="https://www.firstderm.com/">FirstDerm</a>. {% endblock %}
-    </div>
-    <!-- {% if DEBUG %} {{ hotreload.script(url_for('ws')) }} {% endif %} -->
-  </body>
+
+<head>
+    <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<title>{% block title %}{% endblock %} - AutoDerm</title>
+	<meta name="description" content="Dermatology AI made easy" />
+	<meta name="author" content="Ricardo Ander-Egg" />
+</head>
+
+<body>
+	<div id="content" class="flex justify-center items-center min-h-screen">
+		{% block content %}{% endblock %}
+	</div>
+	<div id="footer">
+		{% block footer %} &copy;
+		<a href="https://www.autoderm.firstderm.com/">AutoDerm</a>. {% endblock %}
+	</div>
+</body>
+
 </html>
